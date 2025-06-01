@@ -1,0 +1,83 @@
+https://chatgpt.com/canvas/shared/6820ee1c091c8191bcae03899ba66575
+
+**📘 Pattern Sheet: Disguised Variants of 'Max of Min for Every Window Size'**
+
+---
+
+### 🔍 Core Pattern Summary
+
+* **Original problem**: For every window size `k`, find the maximum of minimums of all windows of size `k`.
+* **Key Idea**: Flip the problem — instead of checking all windows, compute for each element the span of window sizes where it's the minimum.
+* **Tool Used**: Monotonic stack to find Previous Smaller Element (PSE) and Next Smaller Element (NSE).
+
+---
+
+### 🧠 How to Recognize Disguised Variants
+
+Look for these trigger words/phrases:
+
+* "For each window size k"
+* "All subarrays"
+* "Minimum/maximum value in subarrays"
+* "Element is min/max in how many subarrays"
+* "Contribution of element to subarrays"
+* "Span/range where element dominates"
+
+---
+
+### 🎭 Disguised Variants Breakdown
+
+#### 1. **Sum of Subarray Minimums**
+
+**Leetcode 907**
+**Prompt**: Sum the minimums of all subarrays.
+**Core similarity**: Each element contributes to many subarrays where it's the min.
+**Pattern trigger**: "Contribution of element" → requires NSE/PSE spans.
+
+---
+
+#### 2. **Largest Rectangle in Histogram**
+
+**Leetcode 84**
+**Prompt**: Find the largest rectangle under the histogram.
+**Core similarity**: Each bar is minimum for a range — use NSE/PSE to find its influence.
+**Pattern trigger**: "Span for each index" → compute max area using monotonic stack.
+
+---
+
+#### 3. **Max of Aggregate over All Window Sizes**
+
+**Prompt**: For each window size `k`, find the max/min/median of all windows of size `k`.
+**Core similarity**: Need to compute something for every window size without brute force.
+**Pattern trigger**: "Every window size" → flip the problem to element-wise influence.
+
+---
+
+#### 4. **Count of Subarrays Where arr\[i] is Min**
+
+**Prompt**: For each index `i`, count the number of subarrays where `arr[i]` is the smallest.
+**Core similarity**: Same span computation as original problem.
+**Pattern trigger**: "How many subarrays..." → control span with PSE/NSE.
+
+---
+
+### ⚡ Post-Processing Patterns
+
+* When aggregating values per window size, use reverse propagation:
+
+```python
+for i in range(n-1, 0, -1):
+    result[i] = max(result[i], result[i+1])
+```
+
+* This ensures valid fallback for sizes not directly hit by any element.
+
+---
+
+### ✅ Mental Checklist
+
+*
+
+---
+
+Mastering this class of problems will help across sliding window, range queries, and even some dynamic programming problems where subarray structure matters.

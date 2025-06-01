@@ -1,0 +1,68 @@
+https://chatgpt.com/share/681ba34b-57f0-8010-9239-c6fc50fac547
+
+🔥 Famous & Classic Problems:
+1. Sum of All Subarray Minimums
+
+🔗 LeetCode 907: https://leetcode.com/problems/sum-of-subarray-minimums
+
+    Use: Monotonic stack + contribution
+
+    Formula: Each element's count as minimum = (i - PLE[i]) * (NLE[i] - i)
+
+2. Sum of All Subarray Maximums
+
+🔗 LeetCode 2104 variation (or implement yourself)
+
+    Same idea but reversed inequality for max.
+
+3. Total Strength of Wizards
+
+🔗 LeetCode 2281: https://leetcode.com/problems/sum-of-total-strength-of-wizards
+
+    Advanced: Combines prefix sums and contribution with minimums.
+
+    This is a very popular hard problem that heavily tests these principles.
+
+4. Sum of Subarray Ranges
+
+🔗 LeetCode 2104: https://leetcode.com/problems/sum-of-subarray-ranges
+
+    Ask for the difference between subarray max and min.
+
+    You compute contribution of each element as max and as min.
+
+5. Sum of All Subarrays (basic version)
+
+    For any arr[i], how many subarrays include it? Use:
+    (i+1)⋅(n−i)
+    (i+1)⋅(n−i)
+
+6. Sum of Bitwise AND/OR over all subarrays
+
+    Advanced technique often using the same count formula.
+
+    Example: GFG - Sum of bitwise OR of all subarrays.
+
+🧠 What to master:
+
+    Contribution thinking: Instead of brute force subarrays, flip perspective and ask: "How many times does each element contribute?"
+
+    Monotonic stacks: Efficiently finding PLE/NLE for subarray range counting.
+
+    Prefix sums / cumulative techniques: Often combined with contribution to optimize.
+
+✅ How to get strong:
+
+    Master Leetcode 907, 2104, and 2281 — all three cover increasing difficulty.
+
+    Solve at least 1 problem using both:
+
+        Brute force (for intuition)
+
+        Optimized with stacks/contribution.
+
+    Build a cheat sheet with:
+
+        Count of subarrays containing i: (i + 1) * (n - i)
+
+        Count where i is min/max: (i - PLE) * (NLE - i)

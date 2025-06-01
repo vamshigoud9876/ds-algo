@@ -1,5 +1,5 @@
 package com.decodejava.dsa;
 
-public class Greedy {
+public class  Greedy {
 //    https://www.youtube.com/@BroCoders
 }
