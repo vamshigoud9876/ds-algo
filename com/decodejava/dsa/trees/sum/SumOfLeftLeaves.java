@@ -13,7 +13,6 @@ public class SumOfLeftLeaves {
         if (root.left == null && root.right == null && isLeft) {
             return root.data;
         }
-
         return sumHelper(root.left, true) + sumHelper(root.right, false);
     }
 }

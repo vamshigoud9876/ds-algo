@@ -1,0 +1,9 @@
+Avoiding duplicates in subsets:
+    1. SubsetsII -> https://leetcode.com/problems/subsets-ii/
+    2. NonDecreasingSubsequences -> https://leetcode.com/problems/non-decreasing-subsequences/
+
+    -> Making choices:
+        if a duplicate number's first occurrence is already picked in previous
+               recursion call then always pick it. don't unpick it.
+        So, if processed.last == cur[ind], then just pick it, don't call for unpick.
+        Since its already handled in prev recursion where same number is ignored first and later added.

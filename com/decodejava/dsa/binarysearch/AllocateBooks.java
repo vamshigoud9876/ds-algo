@@ -22,7 +22,7 @@ public class AllocateBooks {
         int start = max(arr), end = sum(arr);
         while (start <= end) {
             int mid = (start + end) / 2;
-            int pair[] = allocateBooks(arr, k, mid);
+            int[] pair = allocateBooks(arr, k, mid);
             if(pair[0] > k) start = mid + 1;
             else end = mid - 1;
         }

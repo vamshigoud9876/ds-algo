@@ -24,7 +24,7 @@ public class Permutations {
         for (int i = 0; i <= n; i++) {
             processed.insert(i, ch);//insert at i
             ans.addAll(permuteStrRec(processed, unprocessed, index + 1));
-            //remenber same processed object is passed to future recursion, they will mutate ur builder,
+            //remember same processed object is passed to future recursion, they will mutate ur builder,
             //remove your change when u are done with your call.
             processed.deleteCharAt(i);//backtrack
         }

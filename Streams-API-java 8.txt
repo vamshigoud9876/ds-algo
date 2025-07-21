@@ -1,0 +1,14 @@
+Streams API was introduced in java 8
+
+Streams - Streams API is used to process the colletion of objects in java. 
+
+
+Stream is a sequence of objects that supports various methods and interfaces to get the desired result.
+
+https://youtube.com/shorts/4qc9IVZqL3Y?si=rYTDOylNBZGbdiNj
+
+https://youtube.com/shorts/Q7JCnaiHXE8?si=QEyZbgsZW6URZna5
+
+LLVM
+LSP
+AVL

@@ -17,8 +17,6 @@ public class SumRootToLeaf {
         n *= 10;
         int left = helper(root.left, n + root.data);
         int right = helper(root.right, n + root.data);
-        n /= 10;
-
         return left + right;
 
     }
